@@ -1,0 +1,675 @@
+{
+  "model": [
+    {
+      "bundle": "landing_page",
+      "label": "Landing Page",
+      "description": "Component-based landing page with paragraph sections",
+      "body": false,
+      "fields": [
+        {
+          "id": "sections",
+          "type": "paragraph(hero|card_group|sidebyside|accordion|quote|pricing|logo_collection|stats|newsletter|text_block)[]",
+          "label": "Sections"
+        }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "hero",
+      "label": "Hero Section",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string!", "label": "Title" },
+        { "id": "subtitle", "type": "text", "label": "Subtitle" },
+        { "id": "layout", "type": "string", "label": "Layout" },
+        { "id": "background_color", "type": "string", "label": "Background Color" },
+        { "id": "background_image", "type": "image", "label": "Background Image" },
+        { "id": "primary_cta_text", "type": "string", "label": "Primary CTA Text" },
+        { "id": "primary_cta_url", "type": "string", "label": "Primary CTA URL" },
+        { "id": "secondary_cta_text", "type": "string", "label": "Secondary CTA Text" },
+        { "id": "secondary_cta_url", "type": "string", "label": "Secondary CTA URL" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "card",
+      "label": "Card",
+      "fields": [
+        { "id": "icon", "type": "string", "label": "Icon Name" },
+        { "id": "title", "type": "string!", "label": "Title" },
+        { "id": "description", "type": "text", "label": "Description" },
+        { "id": "link_text", "type": "string", "label": "Link Text" },
+        { "id": "link_url", "type": "string", "label": "Link URL" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "card_group",
+      "label": "Card Group",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "subtitle", "type": "text", "label": "Subtitle" },
+        { "id": "columns", "type": "string", "label": "Columns" },
+        { "id": "cards", "type": "paragraph(card)[]", "label": "Cards" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "fields": [
+        { "id": "icon", "type": "string", "label": "Icon Name" },
+        { "id": "title", "type": "string!", "label": "Title" },
+        { "id": "description", "type": "string", "label": "Description" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "sidebyside",
+      "label": "Side by Side",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string!", "label": "Title" },
+        { "id": "content", "type": "text", "label": "Content" },
+        { "id": "image", "type": "image", "label": "Image" },
+        { "id": "image_position", "type": "string", "label": "Image Position" },
+        { "id": "features", "type": "paragraph(feature_item)[]", "label": "Features" },
+        { "id": "cta_text", "type": "string", "label": "CTA Text" },
+        { "id": "cta_url", "type": "string", "label": "CTA URL" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "faq_item",
+      "label": "FAQ Item",
+      "fields": [
+        { "id": "question", "type": "string!", "label": "Question" },
+        { "id": "answer", "type": "text!", "label": "Answer" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "accordion",
+      "label": "Accordion / FAQ",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "subtitle", "type": "text", "label": "Subtitle" },
+        { "id": "items", "type": "paragraph(faq_item)[]", "label": "FAQ Items" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "fields": [
+        { "id": "quote", "type": "text!", "label": "Quote" },
+        { "id": "author_name", "type": "string!", "label": "Author Name" },
+        { "id": "author_title", "type": "string", "label": "Author Title" },
+        { "id": "author_company", "type": "string", "label": "Author Company" },
+        { "id": "author_image", "type": "image", "label": "Author Image" },
+        { "id": "rating", "type": "string", "label": "Rating" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "quote",
+      "label": "Quote / Testimonials",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "layout", "type": "string", "label": "Layout" },
+        { "id": "testimonials", "type": "paragraph(testimonial)[]", "label": "Testimonials" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "pricing_tier",
+      "label": "Pricing Tier",
+      "fields": [
+        { "id": "name", "type": "string!", "label": "Tier Name" },
+        { "id": "price", "type": "string!", "label": "Price" },
+        { "id": "billing_period", "type": "string", "label": "Billing Period" },
+        { "id": "description", "type": "string", "label": "Description" },
+        { "id": "features", "type": "string[]", "label": "Features" },
+        { "id": "is_featured", "type": "bool", "label": "Featured Tier" },
+        { "id": "cta_text", "type": "string", "label": "CTA Text" },
+        { "id": "cta_url", "type": "string", "label": "CTA URL" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "pricing",
+      "label": "Pricing Section",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "subtitle", "type": "text", "label": "Subtitle" },
+        { "id": "tiers", "type": "paragraph(pricing_tier)[]", "label": "Pricing Tiers" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "logo",
+      "label": "Logo",
+      "fields": [
+        { "id": "name", "type": "string!", "label": "Company Name" },
+        { "id": "image", "type": "image", "label": "Logo Image" },
+        { "id": "url", "type": "string", "label": "Website URL" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "logo_collection",
+      "label": "Logo Collection",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "logos", "type": "paragraph(logo)[]", "label": "Logos" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Stat Item",
+      "fields": [
+        { "id": "value", "type": "string!", "label": "Value" },
+        { "id": "label", "type": "string!", "label": "Label" },
+        { "id": "description", "type": "string", "label": "Description" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stats",
+      "label": "Stats Section",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "background_color", "type": "string", "label": "Background Color" },
+        { "id": "stats", "type": "paragraph(stat_item)[]", "label": "Stats" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "newsletter",
+      "label": "Newsletter Section",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string!", "label": "Title" },
+        { "id": "subtitle", "type": "text", "label": "Subtitle" },
+        { "id": "placeholder", "type": "string", "label": "Input Placeholder" },
+        { "id": "button_text", "type": "string", "label": "Button Text" },
+        { "id": "background_color", "type": "string", "label": "Background Color" }
+      ]
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "text_block",
+      "label": "Text Section",
+      "fields": [
+        { "id": "eyebrow", "type": "string", "label": "Eyebrow Text" },
+        { "id": "title", "type": "string", "label": "Title" },
+        { "id": "content", "type": "text!", "label": "Content" },
+        { "id": "alignment", "type": "string", "label": "Alignment" },
+        { "id": "cta_text", "type": "string", "label": "CTA Text" },
+        { "id": "cta_url", "type": "string", "label": "CTA URL" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "hero-main",
+      "type": "paragraph.hero",
+      "values": {
+        "eyebrow": "Introducing Verdant",
+        "title": "The carbon intelligence platform for climate-forward companies",
+        "subtitle": "Verdant helps businesses measure, reduce, and report their carbon emissions with AI-powered analytics, automated compliance, and real-time sustainability insights.",
+        "layout": "centered",
+        "background_color": "gradient",
+        "background_image": {
+          "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
+          "alt": "Abstract green technology background representing sustainability"
+        },
+        "primary_cta_text": "Start Free Trial",
+        "primary_cta_url": "/signup",
+        "secondary_cta_text": "Watch Demo",
+        "secondary_cta_url": "/demo"
+      }
+    },
+    {
+      "id": "logo-sequoia",
+      "type": "paragraph.logo",
+      "values": { "name": "Sequoia Capital", "url": "https://sequoiacap.com" }
+    },
+    {
+      "id": "logo-a16z",
+      "type": "paragraph.logo",
+      "values": { "name": "Andreessen Horowitz", "url": "https://a16z.com" }
+    },
+    {
+      "id": "logo-khosla",
+      "type": "paragraph.logo",
+      "values": { "name": "Khosla Ventures", "url": "https://khoslaventures.com" }
+    },
+    {
+      "id": "logo-breakthrough",
+      "type": "paragraph.logo",
+      "values": { "name": "Breakthrough Energy", "url": "https://breakthroughenergy.org" }
+    },
+    {
+      "id": "logo-y-combinator",
+      "type": "paragraph.logo",
+      "values": { "name": "Y Combinator", "url": "https://ycombinator.com" }
+    },
+    {
+      "id": "investor-section",
+      "type": "paragraph.logo_collection",
+      "values": {
+        "eyebrow": "Backed By",
+        "title": "Trusted by leading climate investors",
+        "logos": ["@logo-sequoia", "@logo-a16z", "@logo-khosla", "@logo-breakthrough", "@logo-y-combinator"]
+      }
+    },
+    {
+      "id": "stat-1",
+      "type": "paragraph.stat_item",
+      "values": { "value": "2.4M", "label": "Tons CO2 Tracked", "description": "Across our customer base in the last year" }
+    },
+    {
+      "id": "stat-2",
+      "type": "paragraph.stat_item",
+      "values": { "value": "340+", "label": "Enterprise Customers", "description": "Companies using Verdant to meet their climate goals" }
+    },
+    {
+      "id": "stat-3",
+      "type": "paragraph.stat_item",
+      "values": { "value": "98%", "label": "Reporting Accuracy", "description": "Validated against third-party audits" }
+    },
+    {
+      "id": "stat-4",
+      "type": "paragraph.stat_item",
+      "values": { "value": "$48M", "label": "Series B Raised", "description": "To accelerate global carbon intelligence" }
+    },
+    {
+      "id": "stats-section",
+      "type": "paragraph.stats",
+      "values": {
+        "eyebrow": "By the Numbers",
+        "title": "Driving measurable climate impact",
+        "background_color": "light",
+        "stats": ["@stat-1", "@stat-2", "@stat-3", "@stat-4"]
+      }
+    },
+    {
+      "id": "product-card-1",
+      "type": "paragraph.card",
+      "values": {
+        "icon": "BarChart3",
+        "title": "Carbon Analytics",
+        "description": "AI-powered emissions tracking across Scope 1, 2, and 3. Automatically ingest data from your ERP, supply chain, and operational systems.",
+        "link_text": "Learn more",
+        "link_url": "/product/analytics"
+      }
+    },
+    {
+      "id": "product-card-2",
+      "type": "paragraph.card",
+      "values": {
+        "icon": "FileCheck",
+        "title": "Compliance Automation",
+        "description": "Stay ahead of CSRD, SEC climate rules, and TCFD requirements. Auto-generate audit-ready reports with one click.",
+        "link_text": "Learn more",
+        "link_url": "/product/compliance"
+      }
+    },
+    {
+      "id": "product-card-3",
+      "type": "paragraph.card",
+      "values": {
+        "icon": "TrendingDown",
+        "title": "Reduction Roadmaps",
+        "description": "Get AI-generated decarbonization strategies tailored to your industry, supply chain, and operational footprint.",
+        "link_text": "Learn more",
+        "link_url": "/product/reduction"
+      }
+    },
+    {
+      "id": "product-section",
+      "type": "paragraph.card_group",
+      "values": {
+        "eyebrow": "Platform",
+        "title": "One platform for your entire carbon strategy",
+        "subtitle": "From measurement to reduction, Verdant gives sustainability teams the tools they need to drive real impact.",
+        "columns": "3",
+        "cards": ["@product-card-1", "@product-card-2", "@product-card-3"]
+      }
+    },
+    {
+      "id": "how-feature-1",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Database", "title": "Connect Your Data", "description": "Integrate with 200+ data sources including SAP, Oracle, Salesforce, and custom APIs" }
+    },
+    {
+      "id": "how-feature-2",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Brain", "title": "AI Calculates Emissions", "description": "Our models apply emission factors, estimate Scope 3, and identify data gaps automatically" }
+    },
+    {
+      "id": "how-feature-3",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Target", "title": "Get Actionable Insights", "description": "Receive prioritized reduction opportunities ranked by cost, impact, and feasibility" }
+    },
+    {
+      "id": "sidebyside-how",
+      "type": "paragraph.sidebyside",
+      "values": {
+        "eyebrow": "How It Works",
+        "title": "From raw data to climate action in minutes",
+        "content": "<p>Verdant's AI engine transforms your operational data into a complete carbon footprint — no spreadsheets, no consultants, no guesswork. Connect your systems, and our platform does the rest.</p>",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+          "alt": "Dashboard showing carbon analytics and emissions data"
+        },
+        "image_position": "right",
+        "features": ["@how-feature-1", "@how-feature-2", "@how-feature-3"],
+        "cta_text": "See It in Action",
+        "cta_url": "/demo"
+      }
+    },
+    {
+      "id": "supply-feature-1",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Truck", "title": "Supplier Engagement", "description": "Automated surveys and data collection from your supply chain partners" }
+    },
+    {
+      "id": "supply-feature-2",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Globe", "title": "Scope 3 Coverage", "description": "Full upstream and downstream emissions mapping across 15 categories" }
+    },
+    {
+      "id": "supply-feature-3",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "ShieldCheck", "title": "Audit-Ready Data", "description": "Every data point is traceable, verifiable, and ready for third-party assurance" }
+    },
+    {
+      "id": "sidebyside-supply",
+      "type": "paragraph.sidebyside",
+      "values": {
+        "eyebrow": "Supply Chain",
+        "title": "Tackle your biggest emissions source: the supply chain",
+        "content": "<p>For most companies, Scope 3 supply chain emissions represent 70-90% of their total carbon footprint. Verdant makes the hardest part of carbon accounting manageable with automated supplier engagement and AI-powered estimation models.</p>",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80",
+          "alt": "Global supply chain network visualization"
+        },
+        "image_position": "left",
+        "features": ["@supply-feature-1", "@supply-feature-2", "@supply-feature-3"],
+        "cta_text": "Explore Supply Chain Solutions",
+        "cta_url": "/product/supply-chain"
+      }
+    },
+    {
+      "id": "team-card-1",
+      "type": "paragraph.card",
+      "values": { "icon": "User", "title": "Dr. Maya Patel", "description": "CEO & Co-founder. Former climate scientist at NASA. PhD in atmospheric chemistry from MIT.", "link_text": "LinkedIn", "link_url": "#" }
+    },
+    {
+      "id": "team-card-2",
+      "type": "paragraph.card",
+      "values": { "icon": "User", "title": "James Okafor", "description": "CTO & Co-founder. Former VP of Engineering at Stripe. Built real-time data pipelines at scale.", "link_text": "LinkedIn", "link_url": "#" }
+    },
+    {
+      "id": "team-card-3",
+      "type": "paragraph.card",
+      "values": { "icon": "User", "title": "Sofia Chen", "description": "Head of Product. Previously led sustainability products at Salesforce. Stanford MBA.", "link_text": "LinkedIn", "link_url": "#" }
+    },
+    {
+      "id": "team-card-4",
+      "type": "paragraph.card",
+      "values": { "icon": "User", "title": "Dr. Kwame Asante", "description": "Chief Science Officer. 15 years in carbon accounting research. Lead author on IPCC reports.", "link_text": "LinkedIn", "link_url": "#" }
+    },
+    {
+      "id": "team-section",
+      "type": "paragraph.card_group",
+      "values": {
+        "eyebrow": "Our Team",
+        "title": "Led by climate and technology experts",
+        "subtitle": "Our founding team combines deep climate science expertise with world-class engineering to build the carbon intelligence platform the world needs.",
+        "columns": "4",
+        "cards": ["@team-card-1", "@team-card-2", "@team-card-3", "@team-card-4"]
+      }
+    },
+    {
+      "id": "pricing-starter",
+      "type": "paragraph.pricing_tier",
+      "values": {
+        "name": "Starter",
+        "price": "$499",
+        "billing_period": "/month",
+        "description": "For small businesses beginning their sustainability journey",
+        "features": ["Scope 1 & 2 emissions tracking", "Up to 5 facilities", "Basic reporting dashboard", "Email support", "Annual carbon report"],
+        "is_featured": false,
+        "cta_text": "Start Free Trial",
+        "cta_url": "/signup?plan=starter"
+      }
+    },
+    {
+      "id": "pricing-growth",
+      "type": "paragraph.pricing_tier",
+      "values": {
+        "name": "Growth",
+        "price": "$1,999",
+        "billing_period": "/month",
+        "description": "For growing companies with supply chain complexity",
+        "features": ["Scope 1, 2, & 3 tracking", "Unlimited facilities", "Supplier engagement portal", "CSRD & TCFD compliance", "API access", "Priority support", "Custom dashboards"],
+        "is_featured": true,
+        "cta_text": "Start Free Trial",
+        "cta_url": "/signup?plan=growth"
+      }
+    },
+    {
+      "id": "pricing-enterprise",
+      "type": "paragraph.pricing_tier",
+      "values": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "billing_period": "",
+        "description": "For large organizations with global operations",
+        "features": ["Everything in Growth", "Dedicated success manager", "Custom integrations", "SLA guarantee", "SSO & advanced security", "Audit support & assurance prep", "Multi-entity consolidation", "On-premise deployment option"],
+        "is_featured": false,
+        "cta_text": "Contact Sales",
+        "cta_url": "/contact-sales"
+      }
+    },
+    {
+      "id": "pricing-section",
+      "type": "paragraph.pricing",
+      "values": {
+        "eyebrow": "Pricing",
+        "title": "Plans that scale with your impact",
+        "subtitle": "Start with a 14-day free trial. No credit card required. Upgrade or cancel anytime.",
+        "tiers": ["@pricing-starter", "@pricing-growth", "@pricing-enterprise"]
+      }
+    },
+    {
+      "id": "testimonial-1",
+      "type": "paragraph.testimonial",
+      "values": {
+        "quote": "Verdant reduced the time we spend on carbon reporting by 80%. What used to take our sustainability team three months now takes two weeks, with better accuracy.",
+        "author_name": "Rebecca Liu",
+        "author_title": "VP of Sustainability",
+        "author_company": "GlobalTech Industries",
+        "author_image": {
+          "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face&q=80",
+          "alt": "Rebecca Liu headshot"
+        },
+        "rating": "5"
+      }
+    },
+    {
+      "id": "testimonial-2",
+      "type": "paragraph.testimonial",
+      "values": {
+        "quote": "The Scope 3 supply chain module is a game changer. We went from estimating our supply chain emissions to actually measuring them across 200+ suppliers.",
+        "author_name": "Thomas Bergstrom",
+        "author_title": "Chief Sustainability Officer",
+        "author_company": "Nordic Manufacturing Group",
+        "author_image": {
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&q=80",
+          "alt": "Thomas Bergstrom headshot"
+        },
+        "rating": "5"
+      }
+    },
+    {
+      "id": "testimonial-3",
+      "type": "paragraph.testimonial",
+      "values": {
+        "quote": "As a CFO, I need data I can trust. Verdant's audit-ready reports gave our board confidence in our climate disclosures for the first time. The SEC compliance automation alone justifies the investment.",
+        "author_name": "Priya Raghavan",
+        "author_title": "CFO",
+        "author_company": "Meridian Health Systems",
+        "author_image": {
+          "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face&q=80",
+          "alt": "Priya Raghavan headshot"
+        },
+        "rating": "5"
+      }
+    },
+    {
+      "id": "quotes-section",
+      "type": "paragraph.quote",
+      "values": {
+        "eyebrow": "Customer Stories",
+        "title": "Trusted by sustainability leaders worldwide",
+        "layout": "grid",
+        "testimonials": ["@testimonial-1", "@testimonial-2", "@testimonial-3"]
+      }
+    },
+    {
+      "id": "faq-1",
+      "type": "paragraph.faq_item",
+      "values": {
+        "question": "How long does it take to get started with Verdant?",
+        "answer": "<p>Most customers are up and running within 2 weeks. Our onboarding team helps you connect your data sources, configure your emission factors, and generate your first carbon footprint report. For enterprise deployments with custom integrations, plan for 4-6 weeks.</p>"
+      }
+    },
+    {
+      "id": "faq-2",
+      "type": "paragraph.faq_item",
+      "values": {
+        "question": "What data sources does Verdant integrate with?",
+        "answer": "<p>We integrate with 200+ enterprise systems including SAP, Oracle, Salesforce, Workday, and QuickBooks. We also support custom APIs, CSV uploads, and IoT sensor data. Our data team can build custom connectors for proprietary systems.</p>"
+      }
+    },
+    {
+      "id": "faq-3",
+      "type": "paragraph.faq_item",
+      "values": {
+        "question": "Is Verdant compliant with international reporting standards?",
+        "answer": "<p>Yes. Verdant supports GHG Protocol, CSRD, SEC climate disclosure rules, TCFD, CDP, SBTi, and ISO 14064. Our reports are designed to be audit-ready and have been validated by all Big Four accounting firms.</p>"
+      }
+    },
+    {
+      "id": "faq-4",
+      "type": "paragraph.faq_item",
+      "values": {
+        "question": "How does the AI emissions estimation work?",
+        "answer": "<p>Our AI models are trained on millions of verified emissions data points across industries. When primary data isn't available (especially for Scope 3), our models estimate emissions using industry-specific factors, spend data, and supply chain intelligence. We're transparent about data quality scores so you know where to prioritize primary data collection.</p>"
+      }
+    },
+    {
+      "id": "faq-5",
+      "type": "paragraph.faq_item",
+      "values": {
+        "question": "Can I try Verdant before committing?",
+        "answer": "<p>Absolutely. We offer a 14-day free trial on our Starter and Growth plans with no credit card required. You can also request a personalized demo with our sales team to see the platform in action with data relevant to your industry.</p>"
+      }
+    },
+    {
+      "id": "faq-section",
+      "type": "paragraph.accordion",
+      "values": {
+        "eyebrow": "FAQ",
+        "title": "Frequently asked questions",
+        "subtitle": "Everything you need to know about Verdant. Can't find what you're looking for? Reach out to our team.",
+        "items": ["@faq-1", "@faq-2", "@faq-3", "@faq-4", "@faq-5"]
+      }
+    },
+    {
+      "id": "newsletter-section",
+      "type": "paragraph.newsletter",
+      "values": {
+        "eyebrow": "Stay Informed",
+        "title": "Get the latest in carbon intelligence",
+        "subtitle": "Join 12,000+ sustainability professionals receiving weekly insights on carbon regulation, reduction strategies, and platform updates.",
+        "placeholder": "Enter your work email",
+        "button_text": "Subscribe",
+        "background_color": "dark"
+      }
+    },
+    {
+      "id": "homepage",
+      "type": "node.landing_page",
+      "path": "/",
+      "values": {
+        "title": "Verdant - Carbon Intelligence Platform",
+        "sections": [
+          "@hero-main",
+          "@investor-section",
+          "@stats-section",
+          "@product-section",
+          "@sidebyside-how",
+          "@sidebyside-supply",
+          "@team-section",
+          "@pricing-section",
+          "@quotes-section",
+          "@faq-section",
+          "@newsletter-section"
+        ]
+      }
+    },
+    {
+      "id": "about-hero",
+      "type": "paragraph.hero",
+      "values": {
+        "eyebrow": "Our Mission",
+        "title": "Making carbon accountability accessible to every company on Earth",
+        "subtitle": "Founded in 2022, Verdant was born from the belief that technology can close the gap between climate ambition and climate action. We build the tools that make it possible.",
+        "layout": "centered",
+        "background_color": "light",
+        "background_image": {
+          "url": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop&q=80",
+          "alt": "Lush green forest canopy from above"
+        }
+      }
+    },
+    {
+      "id": "about-text",
+      "type": "paragraph.text_block",
+      "values": {
+        "title": "Why We Started Verdant",
+        "content": "<p>When Dr. Maya Patel left NASA's climate research division, she saw a fundamental disconnect: the science on climate change was clear, but most companies had no practical way to measure or reduce their emissions. The tools available were expensive, manual, and inaccurate.</p><p>Together with James Okafor, she built Verdant to bring the precision of climate science and the power of modern data engineering to carbon accounting. Today, our platform helps 340+ companies turn climate commitments into measurable progress.</p><p>We're backed by $62M in funding from leading climate and technology investors who share our vision of a world where every business decision accounts for its carbon impact.</p>",
+        "alignment": "left",
+        "cta_text": "Join Our Team",
+        "cta_url": "/careers"
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.landing_page",
+      "path": "/about",
+      "values": {
+        "title": "About Verdant",
+        "sections": [
+          "@about-hero",
+          "@about-text",
+          "@stats-section",
+          "@team-section",
+          "@investor-section"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "data": {
+    "nodeLandingPages": {
+      "__typename": "NodeLandingPageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeLandingPage",
+          "id": "homepage",
+          "title": "Verdant - Carbon Intelligence Platform",
+          "path": "/",
+          "sections": [
+            {
+              "__typename": "ParagraphHero",
+              "id": "hero-main",
+              "title": "The carbon intelligence platform for climate-forward companies",
+              "eyebrow": "Introducing Verdant",
+              "subtitle": {
+                "processed": "Verdant helps businesses measure, reduce, and report their carbon emissions with AI-powered analytics, automated compliance, and real-time sustainability insights.",
+                "summary": "Verdant helps businesses measure, reduce, and report their carbon emissions with AI-powered analytics, automated compliance, and real-time sustainability insights."
+              },
+              "layout": "centered",
+              "backgroundColor": "gradient",
+              "backgroundImage": {
+                "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
+                "alt": "Abstract green technology background representing sustainability",
+                "width": 800,
+                "height": 533,
+                "variations": [
+                  {
+                    "name": "LARGE",
+                    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
+                    "width": 800,
+                    "height": 533
+                  },
+                  {
+                    "name": "MEDIUM",
+                    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
+                    "width": 480,
+                    "height": 320
+                  },
+                  {
+                    "name": "THUMBNAIL",
+                    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop&q=80",
+                    "width": 200,
+                    "height": 133
+                  }
+                ]
+              },
+              "primaryCtaText": "Start Free Trial",
+              "primaryCtaUrl": "/signup",
+              "secondaryCtaText": "Watch Demo",
+              "secondaryCtaUrl": "/demo"
+            },
+            {
+              "__typename": "ParagraphLogoCollection",
+              "id": "investor-section",
+              "title": "Trusted by leading climate investors",
+              "eyebrow": "Backed By",
+              "logos": [
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-sequoia",
+                  "title": "",
+                  "name": "Sequoia Capital",
+                  "url": "https://sequoiacap.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-a16z",
+                  "title": "",
+                  "name": "Andreessen Horowitz",
+                  "url": "https://a16z.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-khosla",
+                  "title": "",
+                  "name": "Khosla Ventures",
+                  "url": "https://khoslaventures.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-breakthrough",
+                  "title": "",
+                  "name": "Breakthrough Energy",
+                  "url": "https://breakthroughenergy.org"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-y-combinator",
+                  "title": "",
+                  "name": "Y Combinator",
+                  "url": "https://ycombinator.com"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphStats",
+              "id": "stats-section",
+              "title": "Driving measurable climate impact",
+              "eyebrow": "By the Numbers",
+              "backgroundColor": "light",
+              "stats": [
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-1",
+                  "title": "",
+                  "value": "2.4M",
+                  "label": "Tons CO2 Tracked",
+                  "description": "Across our customer base in the last year"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-2",
+                  "title": "",
+                  "value": "340+",
+                  "label": "Enterprise Customers",
+                  "description": "Companies using Verdant to meet their climate goals"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-3",
+                  "title": "",
+                  "value": "98%",
+                  "label": "Reporting Accuracy",
+                  "description": "Validated against third-party audits"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-4",
+                  "title": "",
+                  "value": "$48M",
+                  "label": "Series B Raised",
+                  "description": "To accelerate global carbon intelligence"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphCardGroup",
+              "id": "product-section",
+              "title": "One platform for your entire carbon strategy",
+              "eyebrow": "Platform",
+              "subtitle": {
+                "processed": "From measurement to reduction, Verdant gives sustainability teams the tools they need to drive real impact.",
+                "summary": "From measurement to reduction, Verdant gives sustainability teams the tools they need to drive real impact."
+              },
+              "columns": "3",
+              "cards": [
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "product-card-1",
+                  "title": "Carbon Analytics",
+                  "icon": "BarChart3",
+                  "description": {
+                    "processed": "AI-powered emissions tracking across Scope 1, 2, and 3. Automatically ingest data from your ERP, supply chain, and operational systems.",
+                    "summary": "AI-powered emissions tracking across Scope 1, 2, and 3. Automatically ingest data from your ERP, supply chain, and operational systems."
+                  },
+                  "linkText": "Learn more",
+                  "linkUrl": "/product/analytics"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "product-card-2",
+                  "title": "Compliance Automation",
+                  "icon": "FileCheck",
+                  "description": {
+                    "processed": "Stay ahead of CSRD, SEC climate rules, and TCFD requirements. Auto-generate audit-ready reports with one click.",
+                    "summary": "Stay ahead of CSRD, SEC climate rules, and TCFD requirements. Auto-generate audit-ready reports with one click."
+                  },
+                  "linkText": "Learn more",
+                  "linkUrl": "/product/compliance"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "product-card-3",
+                  "title": "Reduction Roadmaps",
+                  "icon": "TrendingDown",
+                  "description": {
+                    "processed": "Get AI-generated decarbonization strategies tailored to your industry, supply chain, and operational footprint.",
+                    "summary": "Get AI-generated decarbonization strategies tailored to your industry, supply chain, and operational footprint."
+                  },
+                  "linkText": "Learn more",
+                  "linkUrl": "/product/reduction"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphSidebyside",
+              "id": "sidebyside-how",
+              "title": "From raw data to climate action in minutes",
+              "eyebrow": "How It Works",
+              "content": {
+                "processed": "<p>Verdant's AI engine transforms your operational data into a complete carbon footprint — no spreadsheets, no consultants, no guesswork. Connect your systems, and our platform does the rest.</p>",
+                "summary": "Verdant's AI engine transforms your operational data into a complete carbon footprint — no spreadsheets, no consultants, no guesswork. Connect your systems, and our platform does the rest."
+              },
+              "image": {
+                "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+                "alt": "Dashboard showing carbon analytics and emissions data",
+                "width": 800,
+                "height": 533,
+                "variations": [
+                  {
+                    "name": "LARGE",
+                    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+                    "width": 800,
+                    "height": 533
+                  },
+                  {
+                    "name": "MEDIUM",
+                    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&h=600&fit=crop&q=80",
+                    "width": 480,
+                    "height": 320
+                  },
+                  {
+                    "name": "THUMBNAIL",
+                    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=600&fit=crop&q=80",
+                    "width": 200,
+                    "height": 133
+                  }
+                ]
+              },
+              "imagePosition": "right",
+              "features": [
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "how-feature-1",
+                  "title": "Connect Your Data",
+                  "icon": "Database",
+                  "description": "Integrate with 200+ data sources including SAP, Oracle, Salesforce, and custom APIs"
+                },
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "how-feature-2",
+                  "title": "AI Calculates Emissions",
+                  "icon": "Brain",
+                  "description": "Our models apply emission factors, estimate Scope 3, and identify data gaps automatically"
+                },
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "how-feature-3",
+                  "title": "Get Actionable Insights",
+                  "icon": "Target",
+                  "description": "Receive prioritized reduction opportunities ranked by cost, impact, and feasibility"
+                }
+              ],
+              "ctaText": "See It in Action",
+              "ctaUrl": "/demo"
+            },
+            {
+              "__typename": "ParagraphSidebyside",
+              "id": "sidebyside-supply",
+              "title": "Tackle your biggest emissions source: the supply chain",
+              "eyebrow": "Supply Chain",
+              "content": {
+                "processed": "<p>For most companies, Scope 3 supply chain emissions represent 70-90% of their total carbon footprint. Verdant makes the hardest part of carbon accounting manageable with automated supplier engagement and AI-powered estimation models.</p>",
+                "summary": "For most companies, Scope 3 supply chain emissions represent 70-90% of their total carbon footprint. Verdant makes the hardest part of carbon accounting manageable with automated supplier engagement a"
+              },
+              "image": {
+                "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80",
+                "alt": "Global supply chain network visualization",
+                "width": 800,
+                "height": 533,
+                "variations": [
+                  {
+                    "name": "LARGE",
+                    "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80",
+                    "width": 800,
+                    "height": 533
+                  },
+                  {
+                    "name": "MEDIUM",
+                    "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=480&h=600&fit=crop&q=80",
+                    "width": 480,
+                    "height": 320
+                  },
+                  {
+                    "name": "THUMBNAIL",
+                    "url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=200&h=600&fit=crop&q=80",
+                    "width": 200,
+                    "height": 133
+                  }
+                ]
+              },
+              "imagePosition": "left",
+              "features": [
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "supply-feature-1",
+                  "title": "Supplier Engagement",
+                  "icon": "Truck",
+                  "description": "Automated surveys and data collection from your supply chain partners"
+                },
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "supply-feature-2",
+                  "title": "Scope 3 Coverage",
+                  "icon": "Globe",
+                  "description": "Full upstream and downstream emissions mapping across 15 categories"
+                },
+                {
+                  "__typename": "ParagraphFeatureItem",
+                  "id": "supply-feature-3",
+                  "title": "Audit-Ready Data",
+                  "icon": "ShieldCheck",
+                  "description": "Every data point is traceable, verifiable, and ready for third-party assurance"
+                }
+              ],
+              "ctaText": "Explore Supply Chain Solutions",
+              "ctaUrl": "/product/supply-chain"
+            },
+            {
+              "__typename": "ParagraphCardGroup",
+              "id": "team-section",
+              "title": "Led by climate and technology experts",
+              "eyebrow": "Our Team",
+              "subtitle": {
+                "processed": "Our founding team combines deep climate science expertise with world-class engineering to build the carbon intelligence platform the world needs.",
+                "summary": "Our founding team combines deep climate science expertise with world-class engineering to build the carbon intelligence platform the world needs."
+              },
+              "columns": "4",
+              "cards": [
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-1",
+                  "title": "Dr. Maya Patel",
+                  "icon": "User",
+                  "description": {
+                    "processed": "CEO & Co-founder. Former climate scientist at NASA. PhD in atmospheric chemistry from MIT.",
+                    "summary": "CEO & Co-founder. Former climate scientist at NASA. PhD in atmospheric chemistry from MIT."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-2",
+                  "title": "James Okafor",
+                  "icon": "User",
+                  "description": {
+                    "processed": "CTO & Co-founder. Former VP of Engineering at Stripe. Built real-time data pipelines at scale.",
+                    "summary": "CTO & Co-founder. Former VP of Engineering at Stripe. Built real-time data pipelines at scale."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-3",
+                  "title": "Sofia Chen",
+                  "icon": "User",
+                  "description": {
+                    "processed": "Head of Product. Previously led sustainability products at Salesforce. Stanford MBA.",
+                    "summary": "Head of Product. Previously led sustainability products at Salesforce. Stanford MBA."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-4",
+                  "title": "Dr. Kwame Asante",
+                  "icon": "User",
+                  "description": {
+                    "processed": "Chief Science Officer. 15 years in carbon accounting research. Lead author on IPCC reports.",
+                    "summary": "Chief Science Officer. 15 years in carbon accounting research. Lead author on IPCC reports."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphPricing",
+              "id": "pricing-section",
+              "title": "Plans that scale with your impact",
+              "eyebrow": "Pricing",
+              "subtitle": {
+                "processed": "Start with a 14-day free trial. No credit card required. Upgrade or cancel anytime.",
+                "summary": "Start with a 14-day free trial. No credit card required. Upgrade or cancel anytime."
+              },
+              "tiers": [
+                {
+                  "__typename": "ParagraphPricingTier",
+                  "id": "pricing-starter",
+                  "title": "",
+                  "name": "Starter",
+                  "price": "$499",
+                  "billingPeriod": "/month",
+                  "description": "For small businesses beginning their sustainability journey",
+                  "features": [
+                    "Scope 1 & 2 emissions tracking",
+                    "Up to 5 facilities",
+                    "Basic reporting dashboard",
+                    "Email support",
+                    "Annual carbon report"
+                  ],
+                  "isFeatured": false,
+                  "ctaText": "Start Free Trial",
+                  "ctaUrl": "/signup?plan=starter"
+                },
+                {
+                  "__typename": "ParagraphPricingTier",
+                  "id": "pricing-growth",
+                  "title": "",
+                  "name": "Growth",
+                  "price": "$1,999",
+                  "billingPeriod": "/month",
+                  "description": "For growing companies with supply chain complexity",
+                  "features": [
+                    "Scope 1, 2, & 3 tracking",
+                    "Unlimited facilities",
+                    "Supplier engagement portal",
+                    "CSRD & TCFD compliance",
+                    "API access",
+                    "Priority support",
+                    "Custom dashboards"
+                  ],
+                  "isFeatured": true,
+                  "ctaText": "Start Free Trial",
+                  "ctaUrl": "/signup?plan=growth"
+                },
+                {
+                  "__typename": "ParagraphPricingTier",
+                  "id": "pricing-enterprise",
+                  "title": "",
+                  "name": "Enterprise",
+                  "price": "Custom",
+                  "billingPeriod": "",
+                  "description": "For large organizations with global operations",
+                  "features": [
+                    "Everything in Growth",
+                    "Dedicated success manager",
+                    "Custom integrations",
+                    "SLA guarantee",
+                    "SSO & advanced security",
+                    "Audit support & assurance prep",
+                    "Multi-entity consolidation",
+                    "On-premise deployment option"
+                  ],
+                  "isFeatured": false,
+                  "ctaText": "Contact Sales",
+                  "ctaUrl": "/contact-sales"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphQuote",
+              "id": "quotes-section",
+              "title": "Trusted by sustainability leaders worldwide",
+              "eyebrow": "Customer Stories",
+              "layout": "grid",
+              "testimonials": [
+                {
+                  "__typename": "ParagraphTestimonial",
+                  "id": "testimonial-1",
+                  "title": "",
+                  "quote": "Verdant reduced the time we spend on carbon reporting by 80%. What used to take our sustainability team three months now takes two weeks, with better accuracy.",
+                  "authorName": "Rebecca Liu",
+                  "authorTitle": "VP of Sustainability",
+                  "authorCompany": "GlobalTech Industries",
+                  "authorImage": {
+                    "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face&q=80",
+                    "alt": "Rebecca Liu headshot",
+                    "width": 800,
+                    "height": 533,
+                    "variations": [
+                      {
+                        "name": "LARGE",
+                        "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 800,
+                        "height": 533
+                      },
+                      {
+                        "name": "MEDIUM",
+                        "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 480,
+                        "height": 320
+                      },
+                      {
+                        "name": "THUMBNAIL",
+                        "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 200,
+                        "height": 133
+                      }
+                    ]
+                  },
+                  "rating": "5"
+                },
+                {
+                  "__typename": "ParagraphTestimonial",
+                  "id": "testimonial-2",
+                  "title": "",
+                  "quote": "The Scope 3 supply chain module is a game changer. We went from estimating our supply chain emissions to actually measuring them across 200+ suppliers.",
+                  "authorName": "Thomas Bergstrom",
+                  "authorTitle": "Chief Sustainability Officer",
+                  "authorCompany": "Nordic Manufacturing Group",
+                  "authorImage": {
+                    "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&q=80",
+                    "alt": "Thomas Bergstrom headshot",
+                    "width": 800,
+                    "height": 533,
+                    "variations": [
+                      {
+                        "name": "LARGE",
+                        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 800,
+                        "height": 533
+                      },
+                      {
+                        "name": "MEDIUM",
+                        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 480,
+                        "height": 320
+                      },
+                      {
+                        "name": "THUMBNAIL",
+                        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 200,
+                        "height": 133
+                      }
+                    ]
+                  },
+                  "rating": "5"
+                },
+                {
+                  "__typename": "ParagraphTestimonial",
+                  "id": "testimonial-3",
+                  "title": "",
+                  "quote": "As a CFO, I need data I can trust. Verdant's audit-ready reports gave our board confidence in our climate disclosures for the first time. The SEC compliance automation alone justifies the investment.",
+                  "authorName": "Priya Raghavan",
+                  "authorTitle": "CFO",
+                  "authorCompany": "Meridian Health Systems",
+                  "authorImage": {
+                    "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face&q=80",
+                    "alt": "Priya Raghavan headshot",
+                    "width": 800,
+                    "height": 533,
+                    "variations": [
+                      {
+                        "name": "LARGE",
+                        "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 800,
+                        "height": 533
+                      },
+                      {
+                        "name": "MEDIUM",
+                        "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 480,
+                        "height": 320
+                      },
+                      {
+                        "name": "THUMBNAIL",
+                        "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face&q=80",
+                        "width": 200,
+                        "height": 133
+                      }
+                    ]
+                  },
+                  "rating": "5"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphAccordion",
+              "id": "faq-section",
+              "title": "Frequently asked questions",
+              "eyebrow": "FAQ",
+              "subtitle": {
+                "processed": "Everything you need to know about Verdant. Can't find what you're looking for? Reach out to our team.",
+                "summary": "Everything you need to know about Verdant. Can't find what you're looking for? Reach out to our team."
+              },
+              "items": [
+                {
+                  "__typename": "ParagraphFaqItem",
+                  "id": "faq-1",
+                  "title": "",
+                  "question": "How long does it take to get started with Verdant?",
+                  "answer": "<p>Most customers are up and running within 2 weeks. Our onboarding team helps you connect your data sources, configure your emission factors, and generate your first carbon footprint report. For enterprise deployments with custom integrations, plan for 4-6 weeks.</p>"
+                },
+                {
+                  "__typename": "ParagraphFaqItem",
+                  "id": "faq-2",
+                  "title": "",
+                  "question": "What data sources does Verdant integrate with?",
+                  "answer": "<p>We integrate with 200+ enterprise systems including SAP, Oracle, Salesforce, Workday, and QuickBooks. We also support custom APIs, CSV uploads, and IoT sensor data. Our data team can build custom connectors for proprietary systems.</p>"
+                },
+                {
+                  "__typename": "ParagraphFaqItem",
+                  "id": "faq-3",
+                  "title": "",
+                  "question": "Is Verdant compliant with international reporting standards?",
+                  "answer": "<p>Yes. Verdant supports GHG Protocol, CSRD, SEC climate disclosure rules, TCFD, CDP, SBTi, and ISO 14064. Our reports are designed to be audit-ready and have been validated by all Big Four accounting firms.</p>"
+                },
+                {
+                  "__typename": "ParagraphFaqItem",
+                  "id": "faq-4",
+                  "title": "",
+                  "question": "How does the AI emissions estimation work?",
+                  "answer": "<p>Our AI models are trained on millions of verified emissions data points across industries. When primary data isn't available (especially for Scope 3), our models estimate emissions using industry-specific factors, spend data, and supply chain intelligence. We're transparent about data quality scores so you know where to prioritize primary data collection.</p>"
+                },
+                {
+                  "__typename": "ParagraphFaqItem",
+                  "id": "faq-5",
+                  "title": "",
+                  "question": "Can I try Verdant before committing?",
+                  "answer": "<p>Absolutely. We offer a 14-day free trial on our Starter and Growth plans with no credit card required. You can also request a personalized demo with our sales team to see the platform in action with data relevant to your industry.</p>"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphNewsletter",
+              "id": "newsletter-section",
+              "title": "Get the latest in carbon intelligence",
+              "eyebrow": "Stay Informed",
+              "subtitle": {
+                "processed": "Join 12,000+ sustainability professionals receiving weekly insights on carbon regulation, reduction strategies, and platform updates.",
+                "summary": "Join 12,000+ sustainability professionals receiving weekly insights on carbon regulation, reduction strategies, and platform updates."
+              },
+              "placeholder": "Enter your work email",
+              "buttonText": "Subscribe",
+              "backgroundColor": "dark"
+            }
+          ]
+        },
+        {
+          "__typename": "NodeLandingPage",
+          "id": "about-page",
+          "title": "About Verdant",
+          "path": "/about",
+          "sections": [
+            {
+              "__typename": "ParagraphHero",
+              "id": "about-hero",
+              "title": "Making carbon accountability accessible to every company on Earth",
+              "eyebrow": "Our Mission",
+              "subtitle": {
+                "processed": "Founded in 2022, Verdant was born from the belief that technology can close the gap between climate ambition and climate action. We build the tools that make it possible.",
+                "summary": "Founded in 2022, Verdant was born from the belief that technology can close the gap between climate ambition and climate action. We build the tools that make it possible."
+              },
+              "layout": "centered",
+              "backgroundColor": "light",
+              "backgroundImage": {
+                "url": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop&q=80",
+                "alt": "Lush green forest canopy from above",
+                "width": 800,
+                "height": 533,
+                "variations": [
+                  {
+                    "name": "LARGE",
+                    "url": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop&q=80",
+                    "width": 800,
+                    "height": 533
+                  },
+                  {
+                    "name": "MEDIUM",
+                    "url": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop&q=80",
+                    "width": 480,
+                    "height": 320
+                  },
+                  {
+                    "name": "THUMBNAIL",
+                    "url": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&h=1080&fit=crop&q=80",
+                    "width": 200,
+                    "height": 133
+                  }
+                ]
+              }
+            },
+            {
+              "__typename": "ParagraphTextBlock",
+              "id": "about-text",
+              "title": "Why We Started Verdant",
+              "content": "<p>When Dr. Maya Patel left NASA's climate research division, she saw a fundamental disconnect: the science on climate change was clear, but most companies had no practical way to measure or reduce their emissions. The tools available were expensive, manual, and inaccurate.</p><p>Together with James Okafor, she built Verdant to bring the precision of climate science and the power of modern data engineering to carbon accounting. Today, our platform helps 340+ companies turn climate commitments into measurable progress.</p><p>We're backed by $62M in funding from leading climate and technology investors who share our vision of a world where every business decision accounts for its carbon impact.</p>",
+              "alignment": "left",
+              "ctaText": "Join Our Team",
+              "ctaUrl": "/careers"
+            },
+            {
+              "__typename": "ParagraphStats",
+              "id": "stats-section",
+              "title": "Driving measurable climate impact",
+              "eyebrow": "By the Numbers",
+              "backgroundColor": "light",
+              "stats": [
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-1",
+                  "title": "",
+                  "value": "2.4M",
+                  "label": "Tons CO2 Tracked",
+                  "description": "Across our customer base in the last year"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-2",
+                  "title": "",
+                  "value": "340+",
+                  "label": "Enterprise Customers",
+                  "description": "Companies using Verdant to meet their climate goals"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-3",
+                  "title": "",
+                  "value": "98%",
+                  "label": "Reporting Accuracy",
+                  "description": "Validated against third-party audits"
+                },
+                {
+                  "__typename": "ParagraphStatItem",
+                  "id": "stat-4",
+                  "title": "",
+                  "value": "$48M",
+                  "label": "Series B Raised",
+                  "description": "To accelerate global carbon intelligence"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphCardGroup",
+              "id": "team-section",
+              "title": "Led by climate and technology experts",
+              "eyebrow": "Our Team",
+              "subtitle": {
+                "processed": "Our founding team combines deep climate science expertise with world-class engineering to build the carbon intelligence platform the world needs.",
+                "summary": "Our founding team combines deep climate science expertise with world-class engineering to build the carbon intelligence platform the world needs."
+              },
+              "columns": "4",
+              "cards": [
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-1",
+                  "title": "Dr. Maya Patel",
+                  "icon": "User",
+                  "description": {
+                    "processed": "CEO & Co-founder. Former climate scientist at NASA. PhD in atmospheric chemistry from MIT.",
+                    "summary": "CEO & Co-founder. Former climate scientist at NASA. PhD in atmospheric chemistry from MIT."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-2",
+                  "title": "James Okafor",
+                  "icon": "User",
+                  "description": {
+                    "processed": "CTO & Co-founder. Former VP of Engineering at Stripe. Built real-time data pipelines at scale.",
+                    "summary": "CTO & Co-founder. Former VP of Engineering at Stripe. Built real-time data pipelines at scale."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-3",
+                  "title": "Sofia Chen",
+                  "icon": "User",
+                  "description": {
+                    "processed": "Head of Product. Previously led sustainability products at Salesforce. Stanford MBA.",
+                    "summary": "Head of Product. Previously led sustainability products at Salesforce. Stanford MBA."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                },
+                {
+                  "__typename": "ParagraphCard",
+                  "id": "team-card-4",
+                  "title": "Dr. Kwame Asante",
+                  "icon": "User",
+                  "description": {
+                    "processed": "Chief Science Officer. 15 years in carbon accounting research. Lead author on IPCC reports.",
+                    "summary": "Chief Science Officer. 15 years in carbon accounting research. Lead author on IPCC reports."
+                  },
+                  "linkText": "LinkedIn",
+                  "linkUrl": "#"
+                }
+              ]
+            },
+            {
+              "__typename": "ParagraphLogoCollection",
+              "id": "investor-section",
+              "title": "Trusted by leading climate investors",
+              "eyebrow": "Backed By",
+              "logos": [
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-sequoia",
+                  "title": "",
+                  "name": "Sequoia Capital",
+                  "url": "https://sequoiacap.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-a16z",
+                  "title": "",
+                  "name": "Andreessen Horowitz",
+                  "url": "https://a16z.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-khosla",
+                  "title": "",
+                  "name": "Khosla Ventures",
+                  "url": "https://khoslaventures.com"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-breakthrough",
+                  "title": "",
+                  "name": "Breakthrough Energy",
+                  "url": "https://breakthroughenergy.org"
+                },
+                {
+                  "__typename": "ParagraphLogo",
+                  "id": "logo-y-combinator",
+                  "title": "",
+                  "name": "Y Combinator",
+                  "url": "https://ycombinator.com"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
