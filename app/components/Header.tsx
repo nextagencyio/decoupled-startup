@@ -35,18 +35,18 @@ export default function Header() {
   const activeTab = getActiveTab()
 
   return (
-    <header className="fixed left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10" style={{ top: `${bannerHeight}px` }}>
+    <header className="fixed left-0 right-0 z-50 bg-primary-950/95 backdrop-blur-md border-b border-primary-800/50" style={{ top: `${bannerHeight}px` }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="font-display text-lg font-bold tracking-tight text-white hover:text-cyan-300 transition-colors duration-200">LaunchPad</Link>
+          <Link href="/" className="font-display text-lg font-bold tracking-tight text-white hover:text-accent-400 transition-colors duration-200">LaunchPad</Link>
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <Link key={item.name} href={item.href} className={clsx('text-sm transition-colors duration-200', activeTab === item.name ? 'text-cyan-300' : 'text-slate-300 hover:text-white')}>
+              <Link key={item.name} href={item.href} className={clsx('text-sm transition-colors duration-200', activeTab === item.name ? 'text-accent-400' : 'text-primary-200 hover:text-white')}>
                 {item.name}
               </Link>
             ))}
           </nav>
-          <button type="button" className="md:hidden inline-flex items-center justify-center p-1 text-slate-300 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button type="button" className="md:hidden inline-flex items-center justify-center p-1 text-primary-200 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <span className="sr-only">Open menu</span>
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -56,7 +56,7 @@ export default function Header() {
           <div className="md:hidden pb-4">
             <nav className="flex flex-col space-y-3">
               {navigationItems.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className={clsx('text-sm transition-colors duration-200', activeTab === item.name ? 'text-cyan-300' : 'text-slate-300 hover:text-white')}>
+                <Link key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className={clsx('text-sm transition-colors duration-200', activeTab === item.name ? 'text-accent-400' : 'text-primary-200 hover:text-white')}>
                   {item.name}
                 </Link>
               ))}

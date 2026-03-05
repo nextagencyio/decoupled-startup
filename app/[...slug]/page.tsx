@@ -1,4 +1,3 @@
-import Header from '../components/Header'
 import ErrorBoundary from '../components/ErrorBoundary'
 import HomepageRenderer from '../components/HomepageRenderer'
 import ResponsiveImage from '../components/ResponsiveImage'
@@ -46,7 +45,7 @@ export default async function GenericPage({ params }: { params: Promise<{ slug: 
     if (!entity) {
       return (
         <div className="min-h-screen bg-gray-50">
-          <Header />
+
           <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <PageNotFound path={path} />
           </main>
@@ -64,7 +63,6 @@ export default async function GenericPage({ params }: { params: Promise<{ slug: 
 
     return (
       <div className="min-h-screen bg-gray-50">
-        <Header />
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           <ErrorBoundary>
             <article className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -89,7 +87,6 @@ export default async function GenericPage({ params }: { params: Promise<{ slug: 
     console.error('Error loading page by path:', error)
     return (
       <div className="min-h-screen bg-gray-50">
-        <Header />
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <PageNotFound path={path} />
         </main>

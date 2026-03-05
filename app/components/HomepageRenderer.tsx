@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Header from './Header'
 import HeroSection from './HeroSection'
 import StatsSection from './StatsSection'
 import CTASection from './CTASection'
@@ -15,7 +14,6 @@ interface HomepageRendererProps {
 export default function HomepageRenderer({ homepageContent }: HomepageRendererProps) {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <ErrorBoundary><HeroSection homepageContent={homepageContent} /></ErrorBoundary>
       <ErrorBoundary><StatsSection homepageContent={homepageContent} /></ErrorBoundary>
       <ErrorBoundary><CTASection homepageContent={homepageContent} /></ErrorBoundary>

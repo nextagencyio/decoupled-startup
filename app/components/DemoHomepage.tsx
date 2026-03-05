@@ -1,6 +1,5 @@
 'use client'
 
-import Header from './Header'
 import ParagraphHero from './paragraphs/ParagraphHero'
 import ParagraphLogoCollection from './paragraphs/ParagraphLogoCollection'
 import ParagraphStats from './paragraphs/ParagraphStats'
@@ -19,7 +18,7 @@ const demoData = {
     eyebrow: 'LaunchPad',
     title: 'Ship products faster with the platform built for modern teams',
     subtitle: 'Everything you need to build, deploy, and scale your product. Powerful components, seamless integrations, and world-class support.',
-    layout: 'centered' as const,
+    layout: 'left-aligned' as const,
     backgroundColor: 'gradient',
     primaryCtaText: 'Get Started Free',
     primaryCtaUrl: '/about',
@@ -147,7 +146,6 @@ const demoData = {
 export default function DemoHomepage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
       <ParagraphHero {...demoData.hero} />
       <ParagraphLogoCollection {...demoData.logos} />
       <ParagraphStats {...demoData.stats} />

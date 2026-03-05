@@ -3,7 +3,6 @@ import { headers } from 'next/headers'
 import { getServerApolloClient } from '@/lib/apollo-client'
 import { GET_ALL_LANDING_PAGES } from '@/lib/queries'
 import { LandingPagesData } from '@/lib/types'
-import Header from '../components/Header'
 import LandingPageCard from '../components/LandingPageCard'
 
 export const revalidate = 3600
@@ -33,15 +32,13 @@ export default async function LandingPagesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-
-      <section className="bg-gradient-to-br from-violet-900 via-violet-800 to-violet-900 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Landing Pages
             </h1>
-            <p className="text-xl text-violet-100 max-w-3xl mx-auto">
+            <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Explore our landing pages.
             </p>
           </div>
