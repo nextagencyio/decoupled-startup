@@ -22,9 +22,9 @@ const demoData = {
     layout: 'centered' as const,
     backgroundColor: 'gradient',
     primaryCtaText: 'Get Started Free',
-    primaryCtaUrl: '/signup',
+    primaryCtaUrl: '/about',
     secondaryCtaText: 'Book a Demo',
-    secondaryCtaUrl: '/demo',
+    secondaryCtaUrl: '/about',
   },
   logos: {
     __typename: 'ParagraphLogoCollection' as const,

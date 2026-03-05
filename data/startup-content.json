@@ -232,9 +232,9 @@
           "alt": "Abstract green technology background representing sustainability"
         },
         "primary_cta_text": "Start Free Trial",
-        "primary_cta_url": "/signup",
+        "primary_cta_url": "/about",
         "secondary_cta_text": "Watch Demo",
-        "secondary_cta_url": "/demo"
+        "secondary_cta_url": "/about"
       }
     },
     {
@@ -374,7 +374,7 @@
         "image_position": "right",
         "features": ["@how-feature-1", "@how-feature-2", "@how-feature-3"],
         "cta_text": "See It in Action",
-        "cta_url": "/demo"
+        "cta_url": "/about"
       }
     },
     {

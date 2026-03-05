@@ -47,9 +47,9 @@
                 ]
               },
               "primaryCtaText": "Start Free Trial",
-              "primaryCtaUrl": "/signup",
+              "primaryCtaUrl": "/about",
               "secondaryCtaText": "Watch Demo",
-              "secondaryCtaUrl": "/demo"
+              "secondaryCtaUrl": "/about"
             },
             {
               "__typename": "ParagraphLogoCollection",
@@ -244,7 +244,7 @@
                 }
               ],
               "ctaText": "See It in Action",
-              "ctaUrl": "/demo"
+              "ctaUrl": "/about"
             },
             {
               "__typename": "ParagraphSidebyside",
