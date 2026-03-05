@@ -1,199 +1,107 @@
-# Decoupled Components
+# Decoupled Startup
 
-A component showcase starter for Decoupled Drupal + Next.js. Demonstrates 10 paragraph-style components for building landing pages.
+A startup landing page starter built with Next.js and Drupal (via Decoupled.io). Uses paragraph-style components to build flexible, content-managed landing pages with an about page.
 
-![Decoupled Components Screenshot](docs/screenshot.png)
+![Decoupled Startup Homepage](docs/screenshot.png)
 
 ## Features
 
-- **10 Paragraph Components** - Hero, Cards, Sidebyside, Accordion, Testimonials, Pricing, Logos, Stats, Newsletter, Text
-- **Component Showcase** - Interactive gallery at `/showcase`
-- **Skeleton Loading** - Beautiful loading states for all components
-- **Demo Mode** - Works without Drupal for preview (set `NEXT_PUBLIC_DEMO_MODE=true`)
-- **Modern Design** - Purple/indigo theme with Tailwind CSS
+- **Paragraph Components**: Hero, Cards, Accordion, Testimonials, Pricing, Logos, Stats, Newsletter, and more
+- **About Page**: Dedicated company/team page
+- **Decoupled Drupal**: Content management via Decoupled.io with GraphQL API
+- **Demo Mode**: Fully functional preview with mock data -- no backend required
+- **Modern Design**: Tailwind CSS with customizable color themes
+- **TypeScript**: Fully typed for better developer experience
 
 ## Quick Start
 
-### 1. Clone the template
+### 1. Install & Setup
 
 ```bash
-npx degit nextagencyio/decoupled-components my-components-site
-cd my-components-site
 npm install
-```
-
-### 2. Run interactive setup
-
-```bash
 npm run setup
 ```
 
-This interactive script will:
-- Authenticate with Decoupled.io (opens browser)
-- Create a new Drupal space
-- Wait for provisioning (~90 seconds)
-- Configure your `.env.local` file
-- Import sample content with Unsplash images
+The interactive setup script guides you through creating a Drupal space and importing sample content.
 
-### 3. Start development
+### 2. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) to see your site.
 
----
+### Demo Mode
 
-## Manual Setup
-
-If you prefer to run each step manually:
-
-<details>
-<summary>Click to expand manual setup steps</summary>
-
-### Authenticate with Decoupled.io
+To run without any backend:
 
 ```bash
-npx decoupled-cli@latest auth login
+NEXT_PUBLIC_DEMO_MODE=true npm run dev
 ```
 
-### Create a Drupal space
+## Environment Variables
 
-```bash
-npx decoupled-cli@latest spaces create "My Components Site"
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `DRUPAL_BASE_URL` | Your Drupal space URL | Yes |
+| `DRUPAL_CLIENT_ID` | OAuth client ID | Yes |
+| `DRUPAL_CLIENT_SECRET` | OAuth client secret | Yes |
+| `NEXT_PUBLIC_DEMO_MODE` | Enable demo mode (`true`) | Optional |
+
+## Project Structure
+
 ```
-
-Note the space ID returned (e.g., `Space ID: 1234`). Wait ~90 seconds for provisioning.
-
-### Configure environment
-
-```bash
-npx decoupled-cli@latest spaces env 1234 --write .env.local
+decoupled-startup/
+├── app/
+│   ├── api/graphql/           # Drupal GraphQL proxy
+│   ├── about/page.tsx         # About page
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── DemoHomepage.tsx   # Demo mode landing page
+│   │   ├── LandingPageCard.tsx
+│   │   ├── paragraphs/       # Paragraph components
+│   │   │   ├── ParagraphHero.tsx
+│   │   │   ├── ParagraphCardGroup.tsx
+│   │   │   ├── ParagraphAccordion.tsx
+│   │   │   ├── ParagraphLogoCollection.tsx
+│   │   │   └── ParagraphNewsletter.tsx
+│   │   └── ui/               # Shared UI components
+│   └── [...slug]/page.tsx     # Dynamic routing
+├── lib/
+│   ├── apollo-client.ts       # GraphQL client
+│   ├── queries.ts             # GraphQL queries
+│   └── types.ts
+└── data/
+    └── mock/                  # Demo mode mock data
 ```
-
-### Import content
-
-```bash
-npm run setup-content
-```
-
-This imports:
-- 10 paragraph types with all fields
-- Homepage with all components demonstrated
-- About page with team cards
-- Sample content with Unsplash images
-
-</details>
-
-## Paragraph Types
-
-### Hero Section
-- Eyebrow, Title, Subtitle
-- Background image/color
-- Primary & secondary CTAs
-
-### Card Group
-- Eyebrow, Title, Subtitle
-- Nested cards with icons
-- Configurable columns (2-4)
-
-### Side by Side
-- Content + Image layout
-- Feature list with icons
-- Image position (left/right)
-
-### Accordion / FAQ
-- Collapsible sections
-- Eyebrow, Title, Subtitle
-- Multiple FAQ items
-
-### Quote / Testimonials
-- Author info with photo
-- Star ratings
-- Grid or single layout
-
-### Pricing
-- Multiple pricing tiers
-- Feature lists
-- Featured tier highlight
-
-### Logo Collection
-- Client/partner logos
-- Grayscale hover effect
-
-### Stats
-- Key metrics display
-- Value, label, description
-
-### Newsletter
-- Email signup form
-- Light/dark backgrounds
-
-### Text Block
-- Rich text content
-- Alignment options
-- Optional CTA
 
 ## Customization
 
 ### Colors & Branding
 Edit `tailwind.config.js` to customize colors, fonts, and spacing.
 
-### Content Structure
-Modify `data/components-content.json` to add or change paragraph types and sample content.
-
-### Components
+### Paragraph Components
 React components are in `app/components/paragraphs/`. Update them to match your design needs.
 
-## Demo Mode
+## Commands
 
-Demo mode allows you to showcase the application without connecting to a Drupal backend. It displays all 10 paragraph components with sample content.
-
-### Enable Demo Mode
-
-Set the environment variable:
-
-```bash
-NEXT_PUBLIC_DEMO_MODE=true
-```
-
-Or add to `.env.local`:
-```
-NEXT_PUBLIC_DEMO_MODE=true
-```
-
-### What Demo Mode Does
-
-- Shows a "Demo Mode" banner at the top of the page
-- Displays the DemoHomepage component with all paragraph types
-- No Drupal backend required
-
-### Removing Demo Mode
-
-To convert to a production app with real data:
-
-1. Delete `lib/demo-mode.ts`
-2. Delete `app/components/DemoHomepage.tsx`
-3. Delete `app/components/DemoModeBanner.tsx`
-4. Remove `DemoModeBanner` import and usage from `app/layout.tsx`
-5. Remove demo mode check from `app/page.tsx`
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run setup` | Interactive setup wizard |
+| `npm run setup-content` | Import sample content |
 
 ## Deployment
 
-### Vercel (Recommended)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nextagencyio/decoupled-components)
+1. Push to GitHub
+2. Import in Vercel
+3. Add environment variables
+4. Deploy
 
-Set `NEXT_PUBLIC_DEMO_MODE=true` in Vercel environment variables for a demo deployment.
-
-### Other Platforms
-Works with any Node.js hosting platform that supports Next.js.
-
-## Documentation
-
-- [Decoupled.io Docs](https://www.decoupled.io/docs)
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Drupal GraphQL](https://www.decoupled.io/docs/graphql)
+Set `NEXT_PUBLIC_DEMO_MODE=true` for a demo deployment without backends.
 
 ## License
 
