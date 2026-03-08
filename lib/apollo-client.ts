@@ -1,6 +1,26 @@
 import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client'
+import { isDemoMode, handleMockQuery } from './demo-mode'
 
 const drupalUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
+
+async function fetchGraphql(
+  uri: RequestInfo | URL,
+  options?: RequestInit,
+  withTags = false
+): Promise<Response> {
+  if (typeof window === 'undefined' && isDemoMode()) {
+    const body = typeof options?.body === 'string' ? options.body : '{}'
+    return new Response(JSON.stringify(handleMockQuery(body)), {
+      headers: { 'Content-Type': 'application/json' },
+    })
+  }
+
+  if (withTags) {
+    return fetch(uri, { ...options, next: { tags: ['drupal'] } } as RequestInit)
+  }
+
+  return fetch(uri, options)
+}
 
 function createApolloClient() {
   const isServer = typeof window === 'undefined'
@@ -13,7 +33,7 @@ function createApolloClient() {
       // On the server, tag fetch requests so revalidateTag('drupal') clears the Data Cache
       ...(isServer && {
         fetch: (uri: RequestInfo | URL, options?: RequestInit) =>
-          fetch(uri, { ...options, next: { tags: ['drupal'] } } as RequestInit),
+          fetchGraphql(uri, options, true),
       }),
     }),
     cache: new InMemoryCache({
