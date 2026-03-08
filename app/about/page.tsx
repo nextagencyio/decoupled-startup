@@ -6,6 +6,7 @@ import { LandingPagesData } from '@/lib/types'
 import LandingPageCard from '../components/LandingPageCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Landing Pages | Startup',
