@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 async function getLandingPages() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_ALL_LANDING_PAGES)
+    const data = await client.raw(GET_ALL_LANDING_PAGES)
     return data?.nodeLandingPages?.nodes || []
   } catch (error) {
     console.error('Error fetching landing pages:', error)
@@ -52,7 +52,7 @@ export default async function LandingPagesPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {items.map((item) => (
+              {items.map((item: any) => (
                 <LandingPageCard key={item.id} item={item} />
               ))}
             </div>
