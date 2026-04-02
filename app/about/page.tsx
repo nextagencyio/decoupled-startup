@@ -1,6 +1,5 @@
+import { getClient } from '@/lib/drupal-client'
 import { Metadata } from 'next'
-import { headers } from 'next/headers'
-import { getServerApolloClient } from '@/lib/apollo-client'
 import { GET_ALL_LANDING_PAGES } from '@/lib/queries'
 import { LandingPagesData } from '@/lib/types'
 import LandingPageCard from '../components/LandingPageCard'
@@ -15,12 +14,8 @@ export const metadata: Metadata = {
 
 async function getLandingPages() {
   try {
-    const requestHeaders = await headers()
-    const apolloClient = getServerApolloClient(requestHeaders)
-    const { data } = await apolloClient.query<LandingPagesData>({
-      query: GET_ALL_LANDING_PAGES,
-      fetchPolicy: 'cache-first',
-    })
+    const client = getClient()
+    const { data } = await client.raw(GET_ALL_LANDING_PAGES)
     return data?.nodeLandingPages?.nodes || []
   } catch (error) {
     console.error('Error fetching landing pages:', error)

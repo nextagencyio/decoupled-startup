@@ -1,5 +1,4 @@
 import './globals.css'
-import ApolloProvider from './components/providers/ApolloProvider'
 // DEMO MODE: Remove this import and <DemoModeBanner /> below for production-only builds
 import { DemoModeBanner } from './components/DemoModeBanner'
 import Header from './components/Header'
@@ -68,11 +67,11 @@ export default function RootLayout({
       <body className="font-sans bg-gray-50 text-gray-900 antialiased">
         <DemoModeBanner />
         <Header />
-        <ApolloProvider>
+        
           <main className="pt-16">
             {children}
           </main>
-        </ApolloProvider>
+        
       </body>
     </html>
   )

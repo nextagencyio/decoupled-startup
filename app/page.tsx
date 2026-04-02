@@ -1,4 +1,4 @@
-import { getApolloClient } from '@/lib/apollo-client'
+import { getClient } from '@/lib/drupal-client'
 import { GET_LANDING_PAGE } from '@/lib/queries'
 import type { LandingPage, ParagraphType } from '@/lib/types'
 import { ParagraphList } from './components/paragraphs/ParagraphRenderer'
@@ -38,7 +38,7 @@ async function getHomepage(): Promise<LandingPage | null> {
     return null
   }
 
-  const client = getApolloClient()
+  const client = getClient()
 
   // Try "/" first, then fallback to "/node/1" (Drupal default path)
   const pathsToTry = ['/', '/node/1']
