@@ -45,11 +45,7 @@ async function getHomepage(): Promise<LandingPage | null> {
 
   for (const path of pathsToTry) {
     try {
-      const { data } = await client.query({
-        query: GET_LANDING_PAGE,
-        variables: { path },
-        fetchPolicy: 'network-only',
-      })
+      const data = await client.raw(GET_LANDING_PAGE, { path })
 
       const entity = data?.route?.entity
       if (entity) {
